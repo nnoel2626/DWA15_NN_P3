@@ -10,8 +10,46 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+       // Route::get('/', function()
+      // {
+      // return View::make('hello');
+        // });
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+              //Display index page ///
+
+
+              Route::get ( ' / ',  function( )
+             {
+             return View::make ('index');
+              });
+
+
+
+                Route::get('/LoremGen/{numberOfParas?}', function($numberOfParas = 1) {
+
+                $numberOfParas = $data[ 'numberOfParas'];
+
+                return View::make('LoremGen', $data) ->with ('numberOfParas', $numberOfParas);
+                });
+
+
+
+              Route::GET('/UserGen/{nUsers?}', function( $nUsers= 0   )
+             {
+
+                $numberOfUsers = Input::get('nUsers');
+                $dob = Input::get('dob');
+                $email = Input::get('email');
+                $location = Input::get('location');
+                return View::make('UserGen', ['nUsers' => $numberOfUsers], ['dob' => $dob, 'email' => $email, 'location' => $location]);
+                       print_r($faker);
+                });
+
+
+                Route::get('/child2.php', function()
+                {
+                $a = Input::get('query');
+                $data['userChoice'] = $a;
+                return View::make('child2', $data);
+                });
+

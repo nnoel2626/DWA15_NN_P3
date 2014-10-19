@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends BaseController {
+class  HomeController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -15,9 +15,13 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
-	{
-		return View::make('hello');
-	}
+	// public function home()
+	// {
+	// 	return 'home.......';
+	// }
 
-}
+
+}		// Route::get ( ' / ' ,  array( as ' => 'home' ,  ' uses ' =>  'Project3_Controller@index'
+    //      )) ;
+
+    // Route :: get ( '  ', array ( 'uses' =>  'authors@index ' ) ) ;
