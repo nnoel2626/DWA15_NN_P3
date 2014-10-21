@@ -1,22 +1,23 @@
 
 <!doctype html>
 <html>
-            <head>
-                <title>(' title ' , ' dwa15_P3 ')</title>  <!-- Link to display the title of the page -->
                     <meta charset="UTF-8">
                     <meta name='viewport' content='width=device-width, initial-scale=1'>
-                        {{HTML::style('styles/p3_style.css')}}
 
-            </head>
+                    <title> <!-- Link to display the title of the page -->
+                    @yield (' title ' , ' dwa15_P3 ')
+                    </title>
 
-            <body>
-                    <div id="container">
+                    <head>
+
+                    @yield ('head')
+                    </head>
+
+                    <body>
 
                     @yield( 'content ')
 
-                    </div>
-
-            </body>
+                    </body>
 </html>
 
 
