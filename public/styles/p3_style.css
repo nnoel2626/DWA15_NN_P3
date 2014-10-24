@@ -2,13 +2,15 @@
 
 
 body                 {
-		margin:0;
-		font-family:'Lato', sans-serif;
-		text-align:center;
-		color: #999;
+		background: none repeat scroll 0 0 #222222;
+    	       	font-size: 16px;
+   		 padding: 40px;
+		 margin:0;
+		 text-align:center;
+
 		}
 
-#container	{
+.container	{
 		 background: -webkit-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
 		 background: -o-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
 		 background: linear-gradient(to top, #CCCCCC, #EEEEEE 175px);
@@ -48,7 +50,7 @@ body                 {
 
 
 .nav a      	{ padding: 5px 15px;
-		background-color: #457812;
+		background-color: #f39c12;
 		color:  blue;
 		text-decoration:none;
 		}
@@ -56,7 +58,7 @@ body                 {
 
 
 .nav  a: hover   {
-		background-color: #556688;
+		background-color: #660000;
 		      }
 
  @import url (fonts.googleapis.com/css?family=Lato:700);

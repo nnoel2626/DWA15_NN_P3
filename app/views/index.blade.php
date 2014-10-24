@@ -1,17 +1,18 @@
 @extends('_master')
+
 @section(' title')
 Welcome
 @stop
 @section('head')
 <link rel='stylesheet' href='/styles/p3_style.css' type='text/css'>
-    @stop
-    @section( 'content ')
+@stop
+@section('content')
     <h3> Welcome to my web application!</h3>
     <div class= 'top_bar'>    <!-- Navigation menu--> <!--  For displaying main menu if there is one -->
     <ul class= 'nav'>
-        <li><a href= " /LoremGen" >Lorem-Ipsum  Generator</a></li>
-        <li><a href= " /UserGen" >User Generator</a></li>
-        <li><a href= " # " >Password Generator</a></li>
+        <li><a href= " /loremipsum" >Lorem-Ipsum  Generator</a></li>
+        <li><a href= " /users" >User Generator</a></li>
+        <li><a href= " http://p2.nnoel-phpsite.me " >Password Generator</a></li>
     </ul>
 </div>
 <h4>Main features of this  app</h4>

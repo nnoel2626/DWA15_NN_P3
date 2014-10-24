@@ -1,90 +1,68 @@
 <?php
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
-// Route::get('/', function()
-// {
-// return View::make('hello');
-// });
-//Route Logic to display index page ///
+
+
+
+
+//homepage
 Route::get('/', function()
 {
-return View::make('index');
+    return View::make('index');
 });
-//Logic rootes for Lorem Ipsum Generator Page//
-Route::get ('/LoremGen', function(   ){
-return View::make('LoremGen')
--> with('paragraph', Null );
+
+///form to get lorem ipsum text
+Route::get('/loremipsum/{number?}', function() {
+    $number = Input::get('number');
+
+//validating the form
+    $rules = array(
+        'number' => "Integer|Between:1,9"
+        );
+    $validator = Validator::make(Input::all(), $rules);
+
+
+    if ($validator->fails()) {
+        $messages = $validator->messages();
+        return Redirect::to('loremipsum')
+            ->withErrors($validator);
+    } else {
+
+    //create lorem ipsum text
+        $generator = new Lorem();
+
+        $paragraphs = $generator->getParagraphs($number);
+
+            return View::make('loremipsum')
+
+
+            ->with('number', $number)
+            ->with('paragraphs', $paragraphs);
+        }
+
 });
-Route::post ('/LoremGen', function(){
-$count = Input::get (' paragraphCount ');
-if ($count >0 && $count < 20){
-$count = $count;
-}else{
-$count = 0;
-}
-$generator = new Badcow\LoremIpsum\Generator( );
-$paragraphs = $generator->getParagraphs($count);
-$paragraph = implode('<p>', $paragraphs);
-return View::make('LoremGen')->with('paragraphCount',$paragraph);
+
+
+
+//form to request a number of fake users
+Route::get('/users/{user_number?}', function(){
+    $user_number = Input::get('unser_number');
+    $faker = Faker\Factory::create( );
+
+    //validating the form
+    $rules = array(
+        'user_number' => "Integer|Between:1,9"
+        );
+    $validator = Validator::make(Input::all(), $rules);
+    if ($validator->fails()) {
+        $messages = $validator->messages();
+        return Redirect::to('users')
+            ->withErrors($validator);
+    } else {
+
+    //create users
+        for ($user_number=0; $user_number < 12; $user_number++) {
+            return View::make('users')
+            ->with('user_number', $user_number)
+            ->with('faker', $faker);
+        }
+    }
 });
-//Logic rootes for Ramdom Users Generator Page//
-// // -Route::get('/download',function(){
-Route::get('/UserGen', function(){
-return View::make('UserGen');
-});
-Route::post('/UserGen', function(){
-// Form data
-$count = Input::get('count');
-$birth = Input::get('birth');
-$address = Input::get('address');
-// use the factory to create a Faker\Generator instance
-$faker = Faker\Factory::create();
-#Don't generate anything if values is not as expected.
-if ($count < 1 || $count > 10){
-$count = 0;
-}
-# Generate an array of random information
-for ($x = 0; $x <= $count; $x++){
-// Generate Name
-$data['name'][ ] = $faker->name;
-// Generate Address
-if ($address){
-$data ['address'][ ] = $faker->address;
-$data['city'][ ] = $faker->city;
-$data['state'][ ] = $faker->state;
-}else{
-$data ['address'][ ] = NULL;
-$data['city'][ ] = NULL;
-$data['state'][ ] = NULL;
-}
-// Generate Birthdate
-if ($birth){+     $data['birth'][  ] = $faker->dateTimeThisCentury->format('d-m-Y');
-}else{
-$data['birth'][ ] = NULL;
-}
-}
-return View::make('UserGen')->with('data',$data)->with('count',$count);
-});
-//  Route::GET('/UserGen/{nUsers?}', function( $nUsers= 0   )
-// {
-//    $numberOfUsers = Input::get('nUsers');
-//    $dob = Input::get('dob');
-//    $email = Input::get('email');
-//    $location = Input::get('location');
-//    return View::make('UserGen', ['nUsers' => $numberOfUsers], ['dob' => $dob, 'email' => $email, 'location' => $location]);
-//           print_r($faker);
-//    });
-//    Route::get('/child2.php', function()
-//    {
-//    $a = Input::get('query');
-//    $data['userChoice'] = $a;
-//    return View::make('child2', $data);
-//    });
