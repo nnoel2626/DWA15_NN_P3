@@ -7,7 +7,7 @@ Welcome
 <link rel='stylesheet' href='/styles/p3_style.css' type='text/css'>
 @stop
 @section('content')
-    <h1> Welcome to my web application!</h1>
+    <h1>Developer's Best Friend!</h1>
     <div class= 'top_bar'>    <!-- Navigation menu--> <!--  For displaying main menu if there is one -->
     <ul class= 'nav'>
         <li><a href= " /LoremGen" >Lorem-Ipsum  Generator</a></li>
