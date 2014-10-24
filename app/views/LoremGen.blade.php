@@ -14,16 +14,16 @@ Lorem Ipsum Generator
         <div class='top_bar'>        <!--Navigation menu-->
                 <ul class='nav'>
                     <li><a href='/ '>Home</a></li>
-                    <li><a href='/users'>Ramdom User Generator</a></li>
+                    <li><a href='/UserGen'>Ramdom User Generator</a></li>
                     <li><a href=' http://p2.nnoel-phpsite.me ' >Password Generator</a></li>
                 </ul>
             </div>
 
-        {{Form::open(array('url' => '/loremipsum', 'method' => 'GET'))}}
+        {{Form::open(array('url' => '/LoremGen', 'method' => 'GET'))}}
 
             {{Form::label('number', 'Numer of paragraphs?')}}
 
-            {{Form::text('number', 'Enter number 1-9')}}
+            {{Form::text('number', 'Enter number 1-12')}}
 
             {{Form::submit('Submit')}}
 

@@ -10,8 +10,8 @@ Welcome
     <h3> Welcome to my web application!</h3>
     <div class= 'top_bar'>    <!-- Navigation menu--> <!--  For displaying main menu if there is one -->
     <ul class= 'nav'>
-        <li><a href= " /loremipsum" >Lorem-Ipsum  Generator</a></li>
-        <li><a href= " /users" >Ramdom User Generator</a></li>
+        <li><a href= " /LoremGen" >Lorem-Ipsum  Generator</a></li>
+        <li><a href= " /UserGen" >Ramdom User Generator</a></li>
         <li><a href= " http://p2.nnoel-phpsite.me " >Password Generator</a></li>
     </ul>
 </div>

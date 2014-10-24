@@ -12,7 +12,7 @@
 <div class='top_bar'>        <!--Navigation menu-->
                 <ul class='nav'>
                     <li><a href='/ '>Home</a></li>
-                    <li><a href='/loremipsum'>Lorem Ipsum Generator</a></li>
+                    <li><a href='/LoremGen'>Lorem Ipsum Generator</a></li>
                     <li><a href='http://p2.nnoel-phpsite.me ' >Password Generator</a></li>
                 </ul>
             </div>
@@ -20,7 +20,7 @@
 
 <p>Create random users to test your web applications with.</p>
 
-        {{Form::open(array('url' => '/users', 'method' => 'GET')) ;}}
+        {{Form::open(array('url' => '/UserGen', 'method' => 'GET')) ;}}
 
             {{Form::label('user_number', 'How many users do you need?'); }}
 
@@ -28,12 +28,12 @@
 
             {{Form::submit('Submit'); }}
 
-        {{Form::close(); }}
+        {{Form::close( ); }}
 
         <br/>
 
         @if($errors->has())
-            <div class="alert alert-danger" role="alert">
+            <div class="errors">
                 @foreach ($errors->all() as $error)
                 <ul>
                     <li>{{$error}}</li>
@@ -43,12 +43,11 @@
         @endif
 
         <p>Your faker user will be displayed here:</p>
-        @foreach ($faker as $key) {
+        @for ($i=0; $i < $user_number; $i++)
             <p>{{{$faker->name}}}<br/>
         {{{$faker->streetAddress}}}<br/>
         {{{$faker->city}}}, {{{$faker->stateAbbr}}} {{{$faker->postcode}}}<br/>
         {{{$faker->phoneNumber}}}</p>
-        }
-        @endforeach
+        @endfor
 
     @stop
