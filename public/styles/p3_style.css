@@ -4,7 +4,7 @@
 body                 {
 		background: none repeat scroll 0 0 #222222;
     	       	font-size: 16px;
-   		 padding: 40px;
+   		 padding: 10px;
 		 margin:0;
 		 text-align:center;
 
@@ -32,46 +32,102 @@ body                 {
                            margin: 0 auto;
                            padding: 0 50px 40px;
                            }*/
+h1 		{ text-shadow: 3px 2px 2px rgba(150, 150, 150, 1);
+		  color: #660000;
 
+		    height: 70px;
+		    margin-top: .1em;
+		    margin-bottom: .2em;
+		    font-weight: bold;
+		    text-align: center;
+		    padding-top: 30px;
+		 /* Old browsers */  /*the gredian url: http://www.colorzilla.com/gradient-editor/*/
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' *//*https://kremalicious.com/make-cool-and-clever-text-effects-with-css-text-shadow/*/
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNiNWJkYzgiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIzNiUiIHN0b3AtY29sb3I9IiM4MjhjOTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMjgzNDNiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-radial-gradient(center, ellipse cover,  #b5bdc8 0%, #828c95 36%, #28343b 100%); /* FF3.6+ */
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b5bdc8), color-stop(36%,#828c95), color-stop(100%,#28343b)); /* Chrome,Safari4+ */
+		background: -webkit-radial-gradient(center, ellipse cover,  #b5bdc8 0%,#828c95 36%,#28343b 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-radial-gradient(center, ellipse cover,  #b5bdc8 0%,#828c95 36%,#28343b 100%); /* Opera 12+ */
+		background: -ms-radial-gradient(center, ellipse cover,  #b5bdc8 0%,#828c95 36%,#28343b 100%); /* IE10+ */
+		background: radial-gradient(ellipse at center,  #b5bdc8 0%,#828c95 36%,#28343b 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+                           /*padding: 0 50px 40px*/}
+h2                      {font-size: 18px;
+		 margin: 5px 0 20px 0;
+		 text-align: left;
+
+
+		}
+
+
+h3                     { font-size: 16px;
+		 margin: 10px 0 0 0;
+		 text-align: left;
+		}
+
+p		{ line-height: 14px;
+		  display: inline-block;
+		  text-align: left;
+		}
+
+.line-separator{
+		margin-top: .2em;
+		height:1px;
+
+		background:#660000;
+
+		border-bottom:1px solid #313030;
+
+		}
 
 .nav         	{ list-style: none;
-
+		  margin: 40px 10px 40px 10px;
 
 
 		}
 
 .nav li               {display: inline;
 	              list-style-type: none;
-		 font_family: arial;
+		font-family: arial;
 		font-weight: bold;
- 		margin-right: 40px;
+ 		margin-right: 60px;
  		}
 
 
+		/*http://css-snippets.com/engraved-text/ */
+.nav a      	{
 
-.nav a      	{ padding: 5px 15px;
-		background-color: #f39c12;
-		color:  blue;
+		padding: 5px 10px;
+		background-color: #9E9A8C;
+		color: #333;
+		text-shadow: 0px .5px 0px rgba(255,255,255,.5); /* 50% white from bottom */
 		text-decoration:none;
+		border-radius: 10px;
 		}
 
 
 
 .nav  a: hover   {
 		background-color: #660000;
-		      }
+	            }
 
+.input		{line-height: 18px;
+		  display: inline-block;
+		  text-align: left;
+		}
+
+.ipsum              {
+		font-size: 14px;
+		text-align: left;
+		display: inline-block;
+		}
+
+.rand_user  p    { display: inline-block;
+		font-size: 14px;
+		text-align: left;
+		}
  @import url (fonts.googleapis.com/css?family=Lato:700);
-
-
-		a, a:visited {
-			text-decoration:none;
-		}
-
-		h1 {
-			font-size: 32px;
-			margin: 16px 0 0 0;
-		}
 
 
 
