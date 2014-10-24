@@ -4,8 +4,19 @@
     DWA P3 Random User Generator
     @stop
 
+{{ HTML::style('styles/p3_style.css'); }}
+
 @section('content')
 <h1>Random User Generator</h1>
+
+<div class='top_bar'>        <!--Navigation menu-->
+                <ul class='nav'>
+                    <li><a href='/ '>Home</a></li>
+                    <li><a href='/loremipsum'>Lorem Ipsum Generator</a></li>
+                    <li><a href='http://p2.nnoel-phpsite.me ' >Password Generator</a></li>
+                </ul>
+            </div>
+
 
 <p>Create random users to test your web applications with.</p>
 
@@ -31,7 +42,7 @@
             </div>
         @endif
 
-        <p>Here is your text:</p>
+        <p>Your faker user will be displayed here:</p>
         @foreach ($faker as $key) {
             <p>{{{$faker->name}}}<br/>
         {{{$faker->streetAddress}}}<br/>

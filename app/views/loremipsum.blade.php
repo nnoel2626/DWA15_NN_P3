@@ -4,10 +4,20 @@
 Lorem Ipsum Generator
     @stop
 
+{{ HTML::style('styles/p3_style.css'); }}
+
 @section( 'content' )
 <a href="/">Home</a>
 
         <h1>Lorem Ipsum Generator</h1>
+
+        <div class='top_bar'>        <!--Navigation menu-->
+                <ul class='nav'>
+                    <li><a href='/ '>Home</a></li>
+                    <li><a href='/users'>Ramdom User Generator</a></li>
+                    <li><a href=' http://p2.nnoel-phpsite.me ' >Password Generator</a></li>
+                </ul>
+            </div>
 
         {{Form::open(array('url' => '/loremipsum', 'method' => 'GET'))}}
 

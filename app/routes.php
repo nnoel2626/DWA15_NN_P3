@@ -40,17 +40,20 @@ Route::get('/loremipsum/{number?}', function() {
 
 });
 
-
+// require the Faker autoloader
 
 //form to request a number of fake users
 Route::get('/users/{user_number?}', function(){
+
     $user_number = Input::get('unser_number');
+    // use the factory to create a Faker\Generator instance
     $faker = Faker\Factory::create( );
 
     //validating the form
     $rules = array(
         'user_number' => "Integer|Between:1,9"
         );
+
     $validator = Validator::make(Input::all(), $rules);
     if ($validator->fails()) {
         $messages = $validator->messages();
@@ -60,8 +63,11 @@ Route::get('/users/{user_number?}', function(){
 
     //create users
         for ($user_number=0; $user_number < 12; $user_number++) {
+
             return View::make('users')
+
             ->with('user_number', $user_number)
+
             ->with('faker', $faker);
         }
     }

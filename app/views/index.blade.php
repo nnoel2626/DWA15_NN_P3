@@ -11,14 +11,14 @@ Welcome
     <div class= 'top_bar'>    <!-- Navigation menu--> <!--  For displaying main menu if there is one -->
     <ul class= 'nav'>
         <li><a href= " /loremipsum" >Lorem-Ipsum  Generator</a></li>
-        <li><a href= " /users" >User Generator</a></li>
+        <li><a href= " /users" >Ramdom User Generator</a></li>
         <li><a href= " http://p2.nnoel-phpsite.me " >Password Generator</a></li>
     </ul>
 </div>
 <h4>Main features of this  app</h4>
-<p>Altera volutpat dissentiet at nec. Cum vituperata suscipiantur conclusionemque cu.
-Ex nam dicta legere efficiendi,  cu usu homero ubique, ne pro fierent euripidis gloriatur.
-Cum ex commodo oblique. Ut graecis omittantur interpretaris sea.Ex case mazim laboramus qui.
-Animal assentior omittantur vel eu, sed ad tale reque percipit. Pri an alienum accusamus consequat.
-In elit labores gubergren mel, eam aperiam fuisset ut. Ea nec eruditi fabellas, tempor erroribus ne quo.</p>
+<p>My web application allows the user to generate random filler text and/or random users.
+    Such data is commonly used to simulate the user experience and/or test websites in the development process.
+This site allows the user to generate random filler text and/or random users. Such data is commonly used to simulate
+the user experience and/or test websites in the development process.
+</p>
 @stop
