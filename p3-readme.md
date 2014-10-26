@@ -1,7 +1,23 @@
-+--------+---------------------------------------+------+---------+----------------+---------------+
-| Domain | URI                                   | Name | Action  | Before Filters | After Filters |
-+--------+---------------------------------------+------+---------+----------------+---------------+
-|        | GET|HEAD  /                           |      | Closure |                |               |
-|        | GET|HEAD LoremGen/{numberOfParas?} |      |    Closure |                |               |
-|        | GET|HEAD UserGen/{nUsers?}            |      | Closure |                |               |
-+--------+---------------------------------------+------+---------+----------------+---------------+
+Here are my routes :
+
+λ php artisan route
++--------+---------------------------------+------+---------+----------------+---------------+
+| Domain | URI                             | Name | Action  | Before Filters | After Filters |
++--------+---------------------------------+------+---------+----------------+---------------+
+|        | GET|HEAD /                      |      | Closure |                |               |
+|        | GET|HEAD LoremGen/{number?}     |      | Closure |                |               |
+|        | GET|HEAD UserGen/{user_number?} |      | Closure |                |               |
++--------+---------------------------------+------+---------+----------------+---------------+
+
+I used these two packages at Packagist.org
+
+badcow/lorem Ipsum:https://packagist.org/packages/badcow/lorem-ipsum
+Faker : https://packagist.org/packages/fzaninotto/faker
+
+
+My web application allows users to generate random Lorem Ipsum text which derive from a 1st-century BC latin text by Cicero.
+    Now a days it is used mostly web deloppers  and graphic designers to demonstrate the graphic elements of a document
+     or visual presentation.This application also allows users  to generate  random
+    people names, addresses, and phone numbers.  Such data is commonly used during
+    web development process to populate and  test databases and number of other  applications. I used  my navigation
+    menu to integrate my password generator that I did in project 2.
