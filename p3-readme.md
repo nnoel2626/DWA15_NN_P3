@@ -21,3 +21,7 @@ My web application allows users to generate random Lorem Ipsum text which derive
     people names, addresses, and phone numbers.  Such data is commonly used during
     web development process to populate and  test databases and number of other  applications. I used  my navigation
     menu to integrate my password generator that I did in project 2.
+
+
+    My Jing screencast url: http://www.screencast.com/users/mensah9/folders/Default/media/14f6690e-4cf2-4b9a-9825-2b9c46cce7c6
+    .
