@@ -1,31 +1,43 @@
 
+DWA15 Project 3
+
+This is the P3 Readme for Harvard Extension's Dynamic Web Applications Class.
+
+
+Live URL
+http://p3.nnoel-phpsite.me
+
+
+Jing Screencast:
+My Jing screencast url: http://www.screencast.com/users/mensah9/folders/Default/media/14f6690e-4cf2-4b9a-9825-2b9c46cce7c6
 
 
 
 
+Project Description:
 
-## Laravel PHP Framework
+My web application allows users to generate random Lorem Ipsum text which derive from a 1st-century BC latin text by Cicero.
+Now a days it is used mostly web deloppers  and graphic designers to demonstrate the graphic elements of a document or visual presentation.This application also allows users  to generate  random
+people names, addresses, and phone numbers.  Such data is commonly used during
+web development process to populate and  test databases and number of other  applications. I used  my navigation menu to integrate my password generator that I did in project 2.
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+Here are my routes :
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+λ php artisan route
 
-## Official Documentation
++--------+---------------------------------+------+---------+----------------+---------------+
+| Domain | URI                             | Name | Action  | Before Filters | After Filters |
++--------+---------------------------------+------+---------+----------------+---------------+
+|        | GET|HEAD /                      |      | Closure |                |               |
+|        | GET|HEAD LoremGen/{number?}     |      | Closure |                |               |
+|        | GET|HEAD UserGen/{user_number?} |      | Closure |                |               |
++--------+---------------------------------+------+---------+----------------+---------------+
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
 
-### Contributing To Laravel
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+I used these two packages at Packagist.org
 
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+badcow/lorem Ipsum:https://packagist.org/packages/badcow/lorem-ipsum
+Faker : https://packagist.org/packages/fzaninotto/faker
